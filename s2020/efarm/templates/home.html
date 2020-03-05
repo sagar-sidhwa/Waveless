@@ -1,0 +1,92 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+    <div class="carousel-item active">
+        {% load static %}
+        <img src="{% static 'sr/a.jpg' %}" class="d-block w-100" style="width: 500px; height:600px;" alt="1">
+        <div class="carousel-caption">
+            <h2>Online EFARM</h2>
+            <p>IF ANY ONE CAN SELL ONLINE THEN WE CAN ALSO</p>
+        </div> 
+    </div>
+    <div class="carousel-item">
+        {% load static %}
+        <img src="{% static 'sr/b.jpg' %}" class="d-block w-100" style="width: 500px; height:600px;" alt="2">
+    </div>
+    <div class="carousel-item">
+        {% load static %}
+        <img src="{% static 'sr/c.jpg' %}" class="d-block w-100" style="width: 500px; height:600px;" alt="3">
+    </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+    </a>
+</div>
+<hr>
+<div class="container">
+    <div class="row align-items-center">
+    <div class="col-lg-6 order-lg-2">
+        <div class="p-5">
+            {% load static %}
+            <img class="img-fluid rounded-circle" src="{% static 'sr/1.jpg' %}" alt="c">
+        </div>
+    </div>
+    <div class="col-lg-6 order-lg-1">
+        <div class="p-5">
+        <h2 class="display-4"> National Rural Employment Guarantee Act 2005 </h2>
+        <p>Named as the "Mahatma Gandhi National Rural Employment Guarantee Act", MGNREGA), is an Indian labour law 
+            and social security measure that aims to guarantee the 'right to work'.This act was passed in September 2005</p>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row align-items-center">
+    <div class="col-lg-6">
+        <div class="p-5">
+            {% load static %}
+            <img class="img-fluid rounded-circle" src="{% static 'sr/2.jpg' %}" alt="b">
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="p-5">
+        <h2 class="display-4">We salute you!</h2>
+        <p>Academic research has focused on many dimensions of the NREGA: economic security, self-targeting, women's
+            empowerment, asset creation, corruption, how the scheme impacts agricultural wages. An early overall assessment
+            in the north India states suggested that NREGA was "making a difference to the lives of the rural poor, slowly
+            but surely</p>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row align-items-center">
+    <div class="col-lg-6 order-lg-2">
+        <div class="p-5">
+            {% load static %}
+            <img class="img-fluid rounded-circle" src="{% static 'sr/3.jpg' %}" alt="a">
+        </div>
+    </div>
+    <div class="col-lg-6 order-lg-1">
+        <div class="p-5">
+        <h2 class="display-4">Social Audit</h2>
+        <p>Civil society organisations (CSOs), nongovernmental organisations (NGOs), political representatives, civil servants
+            and workers of Rajasthan and Andhra Pradesh collectively organise social audits to prevent corruption under the NREGA.</p>
+        </div>
+    </div>
+    </div>
+</div>
+
+<br><br><br><br><br><br><br><br> 
+
+
+{% endblock %}

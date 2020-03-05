@@ -1,0 +1,85 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+    <br><br><br><br>
+
+    <div class="card bg-light text-dark text-center container">
+        <div class="card-body">
+        <h1><i class="fas fa-user-plus"></i>Register</h1>
+        </div>
+    </div>
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-4 py-5 bg-dark text-white text-center ">
+                    <div class=" ">
+                        <div class="card-body">
+                            <img src="http://www.ansonika.com/mavia/img/registration_bg.svg" style="width:30%">
+                            <h2 class="py-3">Registration</h2>
+                            <p>We are Happy that you will now be as a part of our EFARM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 py-5 border">
+                    <h4 class="pb-4">Please fill with your details</h4>
+                    <form  method="POST" action="{% url 'addaefc' %}">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <select id="inputState" name="users" class="form-control" required>
+                                        <option value="admin">Admin</option>
+                                        <option value="employee">Employee</option>
+                                        <option value="farmer">Farmer</option>
+                                        <option value="customer">Customer</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                            <input id="name" name="name" placeholder="Name" class="form-control" type="text" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                            <input id="sname" name="sname" placeholder="Surname" class="form-control" type="text" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                            <input id="fname" name="fname" placeholder="Father's Name" class="form-control" type="text" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                            <input id="mname" name="mname" placeholder="Mother's Name" class="form-control" type="text" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                            <input id="address" name="address" placeholder="Address..." class="form-control" type="text" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                                <div class="form-group col-md-6">
+                                <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                <input id="contact" name="contact" placeholder="Mobile No." class="form-control" required="required" type="text">
+                                </div>
+                                
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                            <input id="password" name="password" class="form-control" type="password" placeholder="Password" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                            <input class="form-control" id="cpassword" name="cpassword" type="password" placeholder="Confirm Password" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                                <div class="form-group col-md-6"><button type="submit" class="btn btn-success">Submit</button></div>
+                                <div class="form-group col-md-6"><a href="{% url 'home'%}" class="btn btn-dark">Cancel</a></div>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+<br><br><br><br><br><br>
+{% endblock %}

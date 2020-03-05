@@ -1,0 +1,74 @@
+
+{% extends 'base2.html' %}
+
+{% block content %}
+<hr>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+                <div class="card">
+                    <div class="card bg-dark text-white">
+                        <div class="card-body"><h2>Add Products Data</h2></div>
+                    </div>
+                    <div class="card-body">
+                        <form action="{% url 'home' %}"  enctype='multipart/form-data' method="POST">
+                            {% csrf_token %}
+                            <div class="form-group row">
+                                    <label for="category" class="col-md-4 col-form-label text-md-right">Category:</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="category" class="form-control" name="category">
+                                    </div>
+                                </div>
+                            <div class="form-group row">
+                                <label for="heading" class="col-md-4 col-form-label text-md-right">Heading:</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="heading" class="form-control" name="heading">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="title" class="col-md-4 col-form-label text-md-right">Title:</label>
+                                <div class="col-md-6">
+                                    <input type="title" id="title" class="form-control" name="title">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="description" class="col-md-4 col-form-label text-md-right">Description:</label>
+                                <div class="col-md-6">
+                                    <input type="description" id="description" class="form-control" name="description">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="price" class="col-md-4 col-form-label text-md-right">Price(per kg):</label>
+                                <div class="col-md-6">
+                                    <input type="price" id="price" class="form-control" name="price">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="img" class="col-md-4 col-form-label text-md-right">Upload image</label>
+                                <div class="col-md-6">
+                                <input type="file" id="img" class="form-control-file border" name="img">
+                                </div>
+                            </div>
+                            
+                            <div class="container text-center">
+                                    <div class="row">
+                                        <div class="col-md-6 py-3">
+                                                <button type="submit" value='{{ ts.id }}' name="idetails" class="btn btn-lg btn-dark">Submit</button>
+                                        </div>
+                                    </form>
+                                        <div class="col-md-6 py-3">
+                                    <form action="{% url 'product' %}" method="POST">
+                                            {% csrf_token %}
+                                        <button type= "submit" value='{{ ts.id }}' name="idetails" class="btn btn-lg btn-danger">Cancel</button>
+                                    </form>
+                                    </div>
+                            </div>
+                        
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<hr>
+{% endblock %}
+

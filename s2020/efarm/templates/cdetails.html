@@ -1,0 +1,51 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+
+<hr>
+<div class="jumbotron jumbotron-fluid bg-dark text-white">
+    <div class="container">
+    <h1>Details Of</h1>
+    <h3>All the Customers</h3>
+    </div>
+</div>
+<hr>
+<div class="container">
+    <table class="table table-striped">
+    <tbody>
+    <tr class="bg-dark text-white">
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Father's Name</th>
+    <th>Mother's Name</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th>Contact</th>
+    </tr>
+    {% for c in cus %}
+    <tr>
+    <td>{{c.name}}</td>
+    <td>{{c.sname}}</td>
+    <td>{{c.fname}}</td>
+    <td>{{c.mname}}</td>
+    <td>{{c.address}}</td>
+    <td>{{c.email}}</td>
+    <td>{{c.contact}}</td>
+    
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    </form>
+    <hr>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-3 py-3">
+                    <a href="{% url 'home' %}" class="btn btn-lg btn-dark">Back</a>
+            </div>
+        </div>
+</div>
+    </div>
+<br><br><br><br><br>
+
+{% endblock %}
